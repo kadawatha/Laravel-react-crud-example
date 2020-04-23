@@ -75,7 +75,7 @@ npm install axios
 
 ```
 
-
+![Capture1121212](https://user-images.githubusercontent.com/37043938/80126405-acea5c80-85b0-11ea-8275-c1ee7da5d49b.PNG)
 
 
 
