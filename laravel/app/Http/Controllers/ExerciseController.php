@@ -14,7 +14,7 @@ class ExerciseController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(exercise::get(),200);
     }
 
     /**
@@ -35,7 +35,8 @@ class ExerciseController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $exe = exercise::create($request->all());
+        return response()->json($exe,200);
     }
 
     /**
@@ -44,9 +45,9 @@ class ExerciseController extends Controller
      * @param  \App\exercise  $exercise
      * @return \Illuminate\Http\Response
      */
-    public function show(exercise $exercise)
+    public function show($id)
     {
-        //
+        return response()->json(exercise::find($id),200);
     }
 
     /**
@@ -69,7 +70,8 @@ class ExerciseController extends Controller
      */
     public function update(Request $request, exercise $exercise)
     {
-        //
+        $exercise->update($request->all());
+        return response()->json($exercise,200);
     }
 
     /**
@@ -78,8 +80,9 @@ class ExerciseController extends Controller
      * @param  \App\exercise  $exercise
      * @return \Illuminate\Http\Response
      */
-    public function destroy(exercise $exercise)
+    public function destroy(Request $request, exercise $exercise)
     {
-        //
+        $exercise->delete();
+        return response()->json(null,204);
     }
 }

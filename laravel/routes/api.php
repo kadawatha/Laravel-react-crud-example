@@ -16,3 +16,8 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//http://127.0.0.1:8000/api/exercises
+Route::resource('exercises','ExerciseController');
+//http://127.0.0.1:8000/api/users
+Route::resource('users','UsernameController');

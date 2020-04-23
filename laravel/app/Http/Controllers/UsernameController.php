@@ -14,7 +14,7 @@ class UsernameController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(username::get(),200);
     }
 
     /**
@@ -35,7 +35,8 @@ class UsernameController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = username::create($request->all());
+        return response()->json($user,200);
     }
 
     /**
@@ -44,9 +45,9 @@ class UsernameController extends Controller
      * @param  \App\username  $username
      * @return \Illuminate\Http\Response
      */
-    public function show(username $username)
+    public function show($id)
     {
-        //
+        return response()->json(username::find($id),200);
     }
 
     /**
@@ -69,7 +70,8 @@ class UsernameController extends Controller
      */
     public function update(Request $request, username $username)
     {
-        //
+        $username->update($request->all());
+        return response()->json($username, 200);
     }
 
     /**
@@ -78,8 +80,9 @@ class UsernameController extends Controller
      * @param  \App\username  $username
      * @return \Illuminate\Http\Response
      */
-    public function destroy(username $username)
+    public function destroy(Request $request,username $username)
     {
-        //
+        $username->delete();
+        return response()->json(null,204);
     }
 }
