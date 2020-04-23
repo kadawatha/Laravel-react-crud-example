@@ -33,3 +33,12 @@ php artisan make:model username --all
 php artisan make:model exercise --all
 
 ```
+<hr>
+
+Allow accessing 
+
+```js
+
+Php artisan make:middleware cors
+
+```
