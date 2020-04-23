@@ -60,3 +60,26 @@ in Kernel.php file
 ```
 
 <hr>
+
+## react packages
+
+```
+
+npm install bootstrap
+
+npm install react-router-dom
+
+npm install react-datepicker
+
+npm install axios
+
+```
+
+
+
+
+
+
+
+
+
