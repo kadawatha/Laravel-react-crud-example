@@ -35,32 +35,6 @@ php artisan make:model exercise --all
 ```
 <hr>
 
-Allow accessing 
-
-```
-
-Php artisan make:middleware cors
-
-```
-
-```php
-
-        ->header('Access-Control-Allow-Origin', '*')
-        ->header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
-        ->header('Access-Control-Allow-Headers',' Origin, Content-Type, Accept, Authorization, X-Request-With')
-        ->header('Access-Control-Allow-Credentials',' true');
-
-```
-in Kernel.php file
-
-```php
-
- \App\Http\Middleware\Cors::class,
-
-```
-
-<hr>
-
 ## react packages
 
 ```
